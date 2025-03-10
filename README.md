@@ -1,1 +1,10 @@
 # Diabetes
+O objetivo desse projeto é aplicar Machine Leaning em datasets relacionados a saúde e medicina. Devido minha formação em biotecnologia e engenharia biomédica, darei enfoque a Datasets (coleções de dados) relacionadas a saúde.
+Para nosso primeiro artigo escolhi o Pima Indians Diabetes Database (disponível gratuitamente aqui: https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database), que contém as seguintes informações: número de gestações, concentração de glicose no sangue, pressão arterial, espessura da pele, insulina, idade, Predisposição genética, e presença ou não de diabetes. E a partir desses dados eu proponho a questão: é possível prever a presença ou não de diabetes usando esses dados? Se sim o quanto podemos confiar nessa predição.
+
+Já para o algoritmo escolhido, eu escolhi o K-Nearest Neighbors, que não é o melhor nesse caso, mas foi escolhido devido a sua simplicidade de implementação e explicação de seu funcionamento. Futuramente após vermos outros modelos, vamos aprender maneiras de comparar eles e escolher o melhor modelo para resolver nosso problema.
+O KNN é um algoritmo de aprendizado supervisionado, ou seja, precisamos mostrar ao algoritmo quais são as suas saídas possíveis, no caso a presença ou não de diabetes. O KNN funciona da seguinte maneira, os dados conhecidos e devidamente rotulados se encontram dispersos no espaço, e assumimos que eles formam grupos nesse espaço, então um ponto de rótulo desconhecido é colocado nesse espaço, a sua distância aos outros pontos é calculada, e os K vizinhos mais próximos vão definir seu rótulo.
+
+O KNN tem suas desvantagens, ele é considerado um algoritmo preguiçoso, isso porque cada vez que vamos classificar um novo ponto, ele tem que calcular e comparar com todos outros do dataset, o que faz com que o custo computacional e de desempenho suba muito conforme a quantidade de dados aumenta. Outro ponto fraco é que ao aumentar o número de features, os dados se tornam dispersos no hiperplano, o que deixa difícil criar agrupamentos. 
+
+Por fim é gerada a matriz de confusão, para emtedermos os números de falsos positivos e falso negativos.
